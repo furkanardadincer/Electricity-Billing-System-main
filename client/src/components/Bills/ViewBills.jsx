@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 function ViewBills() {
-  let history = useHistory();
+  let historyss = useHistory();
 
   const [allBills, setAllBills] = useState([]);
 
