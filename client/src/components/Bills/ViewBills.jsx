@@ -38,7 +38,7 @@ function ViewBills() {
       <Navbar page="View Bill" />
       <div className="container" style={{ paddingTop: "40px" }}>
         <h1>Ödenmemiş Faturalar</h1>
-        {allBills.filter((b) => b.status === "Not Paid").length < 1 ? (
+        {allBills.filter((b) => b.status === "Ödenmedi").length < 1 ? (
           <h3>No Bills</h3>
         ) : (
           <div className="table-responsive">
@@ -75,7 +75,7 @@ function ViewBills() {
               </tr>
             </thead>
         {allBills
-          .filter((b) => b.status === "Not Paid")
+          .filter((b) => b.status === "Ödenmedi")
           .map((bill, index) => {
             return (
                   <tbody>
@@ -117,7 +117,7 @@ function ViewBills() {
         )
       }
         <h1 style={{ marginTop: "20px" }}>Ödenen Faturalar</h1>
-        {allBills.filter((b) => b.status === "Paid").length < 1 ? (
+        {allBills.filter((b) => b.status === "Ödendi").length < 1 ? (
           <h3>Fatura Yok</h3>
         ) : (
           <div className="table-responsive">
@@ -157,7 +157,7 @@ function ViewBills() {
               </tr>
             </thead>
         {allBills
-          .filter((b) => b.status === "Paid")
+          .filter((b) => b.status === "Ödendi")
           .map((bill, index) => {
             return (
                   <tbody>

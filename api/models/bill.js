@@ -11,7 +11,7 @@ const billSchema = mongoose.Schema({
     zoneName: { type: String, required: true },
     unitsConsumed: { type: Number, required: true },
     billAmount: { type: Number, required: true },
-    status: { type: String, default: "Not Paid" },
+    status: { type: String, default: "Ödenmedi" },
     paymentDate: { type: String },
     month: { type: String }
 });

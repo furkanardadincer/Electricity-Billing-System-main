@@ -99,7 +99,7 @@ function ViewUserBill() {
         date = date + "-" + month + "-" + year;
 
         const status = {
-          status: "Paid",
+          status: "Ödendi",
           paymentDate: date
         };
 
@@ -140,7 +140,7 @@ Bill Amount: ${billAmt}`
     <div>
       <UserNavbar page="View Bill" />
       <div style={{ margin: "40px" }}>
-        {allBills.filter((b) => b.status !== "Paid").length < 1 ? (
+        {allBills.filter((b) => b.status !== "Ödendi").length < 1 ? (
           <h1 style={{ textAlign: "center" }}>Faturanız Bulunmamaktadır.</h1>
         ) : (
           <div className="table-responsive">
@@ -176,11 +176,11 @@ Bill Amount: ${billAmt}`
                 </th>
               </tr>
             </thead>
-        {allBills.filter((b) => b.status !== "Paid").length < 1 ? (
+        {allBills.filter((b) => b.status !== "Ödendi").length < 1 ? (
           <h1></h1>
         ) : (
           allBills
-            .filter((b) => b.status !== "Paid")
+            .filter((b) => b.status !== "Ödendi")
             .map((bill, index) => {
               return (
                     <tbody>

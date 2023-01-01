@@ -40,33 +40,7 @@ exports.createOneBill = (req, res, next) => {
             error: err
         });
     });
-    // Product
-    //     .findById(req.body.productId)
-    //     .exec()
-    //     .then(product => {
-    //         if (!product) {
-    //             return res.status(404).json({
-    //                 message: 'Product Not Found!'
-    //             });
-    //         }
-    //         return createOrder(req);
-    //     })
-    //     .then(order => {
-    //         return order.save();
-    //     })
-    //     .then(order => {
-    //         return res.status(201).json({
-    //             message: 'Order was created',
-    //             order: {
-    //                 _id: order._id,
-    //                 product: order.product,
-    //                 quantity: order.quantity
-    //             }
-    //         });
-    //     })
-    //     .catch(error => {
-    //         next(error);
-    //     });
+
 };
 
 exports.getBillByStatus = (req, res, next) => {
@@ -103,7 +77,7 @@ exports.getBillByUserId = (req, res, next) => {
 exports.getBillPaidByUserId = (req, res, next) => {
     const userId = req.params.userId;
     Bill
-        .find({$and: [ {userId: userId}, {status: "Paid"} ]})
+        .find({$and: [ {userId: userId}, {status: "Ödendi"} ]})
         .select('_id userId month issueDate paymentDate dueDate zoneName unitsConsumed billAmount status')
         .exec()
         .then(bills => {

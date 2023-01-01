@@ -42,7 +42,7 @@ function PaymentHistory() {
       <div className="container">
         <h1 style={{ marginTop: "20px" }}>Ödeme Geçmişi</h1>
         {allBills.length < 1 ? (
-          <h3>No Bills</h3>
+          <h3>Fatura Bulunmamaktadır</h3>
         ) : (
           <div className="table-responsive">
           <table className="table table-hover bg-warning">
