@@ -38,7 +38,7 @@ function CreateZone() {
           .post("http://localhost:5000/zone/", zone, config)
           .then((response) => {
             console.log(response);
-            toast.success("Zone created Successfully!", {
+            toast.success("Bölge Başarıyla Oluşturuldu!", {
               position: "top-center",
               autoClose: 3000,
               hideProgressBar: false,
@@ -80,7 +80,7 @@ function CreateZone() {
           className="text-dark"
           style={{ fontSize: "75px", textAlign: "center", marginTop: "5rem" }}
         >
-          Create New Zone
+          Bölge Oluştur
         </h1>
         <div className="row justify-content-center">
           <div className="col-md-9 col-lg-12 col-xl-10">
@@ -92,7 +92,7 @@ function CreateZone() {
                       className="flex-grow-1 bg-login-image"
                       style={{
                         backgroundImage:
-                          "url(https://5.imimg.com/data5/IQ/TF/FL/SELLER-30356897/pay-electricity-bill-services-500x500.jpg)",
+                          "url(https://st3.depositphotos.com/9881890/15397/i/600/depositphotos_153977506-stock-photo-vintage-light-bulb.jpg)",
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
@@ -105,7 +105,7 @@ function CreateZone() {
                     <div className="p-5">
                       <form className="user">
                         <div className="mb-3">
-                          <h5>Zone ID</h5>
+                          <h5>Bölge ID</h5>
                           <input
                             onChange={handleChange}
                             name="zoneId"
@@ -113,11 +113,11 @@ function CreateZone() {
                             className="form-control form-control-user"
                             type="text"
                             id="exampleFirstName"
-                            placeholder="Enter Zone ID"
+                            placeholder="Bölge ID Gir"
                           />
                         </div>
                         <div className="mb-3">
-                          <h5>Zone Name</h5>
+                          <h5>Bölge Adı</h5>
                           <input
                             onChange={handleChange}
                             name="zoneName"
@@ -125,11 +125,11 @@ function CreateZone() {
                             className="form-control form-control-user"
                             type="text"
                             id="examplePasswordInput"
-                            placeholder="Enter Zone Name"
+                            placeholder="Bölge Adı Gir"
                           />
                         </div>
                         <div className="mb-3">
-                          <h5>Cost</h5>
+                          <h5>Kullanım Bedeli</h5>
                           <input
                             onChange={handleChange}
                             name="cost"
@@ -137,7 +137,7 @@ function CreateZone() {
                             className="form-control form-control-user"
                             type="number"
                             id="examplePasswordInput"
-                            placeholder="Enter Cost per Unit"
+                            placeholder="Birim Başı Kullanım Bedeli Gir"
                           />
                         </div>
 
@@ -147,7 +147,7 @@ function CreateZone() {
                             className="btn btn-primary d-block btn-user w-100"
                             type="submit"
                           >
-                            Create Zone
+                            Kaydet
                           </button>
                         </div>
                         <hr />

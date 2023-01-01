@@ -43,7 +43,7 @@ function AddUser(props) {
     });
     axios.post("http://localhost:5000/user/signup", user).then((response) => {
       history.push("/adminHome");
-      toast.success("User registered Successfully!", {
+      toast.success("Kullanıcı Başarıyla Kaydedildi!", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -90,8 +90,8 @@ function AddUser(props) {
         password: pass
       };
     });
-    var text = `Your Account is registered Successfully
-Your password is ${pass}
+    var text = `Hesabınız başarıyla oluşturuldu.
+Şi ${pass}
 Login to your account and change your password.`;
     setMail((preValues) => {
       return {
@@ -110,7 +110,7 @@ Login to your account and change your password.`;
           className="text-dark"
           style={{ fontSize: "65px", textAlign: "center", marginTop: "5rem" }}
         >
-          Register New User
+          Yeni Kullanıcı 
         </h1>
         <div className="card shadow-lg o-hidden border-0 my-5">
           <div className="card-body p-0">
@@ -127,7 +127,7 @@ Login to your account and change your password.`;
               <div className="col-lg-7">
                 <div className="p-5">
                   <div className="text-center">
-                    <h4 className="text-dark mb-4">Create an Account!</h4>
+                    <h4 className="text-dark mb-4"></h4>
                   </div>
                   <form className="user">
                     <div className="row mb-3">
@@ -137,7 +137,7 @@ Login to your account and change your password.`;
                           className="form-control form-control-user"
                           type="text"
                           id="exampleFirstName"
-                          placeholder="Name"
+                          placeholder="İsim"
                           name="name"
                           value={user.name}
                         />
@@ -148,7 +148,7 @@ Login to your account and change your password.`;
                           className="form-control form-control-user"
                           type="tel"
                           id="exampleFirstName"
-                          placeholder="Contact Number"
+                          placeholder="İletişim Numarası"
                           name="contactNo"
                           value={user.contactNo}
                         />
@@ -160,7 +160,7 @@ Login to your account and change your password.`;
                         className="form-control form-control-user"
                         type="email"
                         id="exampleFirstName"
-                        placeholder="Email"
+                        placeholder="E-posta"
                         name="email"
                         value={user.email}
                       />
@@ -171,7 +171,7 @@ Login to your account and change your password.`;
                         className="form-control form-control-user"
                         type="text"
                         id="exampleFirstName"
-                        placeholder="Zone ID"
+                        placeholder="Bölge Kodu"
                         name="zoneId"
                         value={user.zoneId}
                       />
@@ -182,22 +182,22 @@ Login to your account and change your password.`;
                         className="form-control form-control-user"
                         type="text"
                         id="examplePasswordInput"
-                        placeholder="Address"
+                        placeholder="Adres"
                         name="address"
                         value={user.address}
                       />
                     </div>
                     <div className="mb-3">
-                    <span>Password</span>
-                       {passGen ? <span className="ml-2"> Password Generated! </span> :
-                      <button className="ml-2 btn btn-outline-dark" onClick={getPassword}>Generate Password</button>}
+                    <span>Şifre</span>
+                       {passGen ? <span className="ml-2"> Şifre Oluşturuldu! </span> :
+                      <button className="ml-2 btn btn-outline-dark" onClick={getPassword}>Şifre Oluştur</button>}
                     </div>
                     <button
                       onClick={registerUser}
                       className="btn btn-primary d-block btn-user w-100"
                       type="submit"
                     >
-                      Register Account
+                      Kaydet
                     </button>
                     <hr />
                   </form>

@@ -86,7 +86,7 @@ function AllUsers() {
               .get("http://localhost:5000/user/")
               .then((res) => {
                 setAllUsers(res.data.users);
-                toast.success("User information updated Successfully!", {
+                toast.success("Kullanıcı Bilgileri Başarıyla Güncellendi!", {
                   position: "top-center",
                   autoClose: 5000,
                   hideProgressBar: false,
@@ -165,7 +165,7 @@ function AllUsers() {
             .get("http://localhost:5000/user/")
             .then((res) => {
               setAllUsers(res.data.users);
-              toast.success("User deleted Successfully!", {
+              toast.success("Kullanıcı Başarıyla Silindi!", {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -191,15 +191,15 @@ function AllUsers() {
             <input
               onChange={handleChangeSearch}
               className="form-control mr-sm-2"
-              placeholder="Search User ID"
+              placeholder="Kullanıcı ID"
               name="uId"
               value={uId}
             />
-            <button className="btn btn-dark my-2 my-sm-0" onClick={searchUser}>Search User</button>
+            <button className="btn btn-dark my-2 my-sm-0" onClick={searchUser}>Kullanıcı Ara</button>
           </div>
           :
           <div className="form-inline float-right" style={{margin: "20px"}}>
-            <button className="btn btn-dark my-2 my-sm-0" onClick={getAll}>List All Users</button>
+            <button className="btn btn-dark my-2 my-sm-0" onClick={getAll}>Tüm Kullanıcıları Listele</button>
           </div>
       }
       <div style={{margin:"20px"}}>
@@ -211,22 +211,22 @@ function AllUsers() {
                 ID
               </th>
               <th scope="col">
-                Name
+                İsim
               </th>
               <th scope="col">
-                Email
+                E-posta
               </th>
               <th scope="col">
-                Contact Number
+                İletişim Numarası
               </th>
               <th scope="col">
-                Address
+                Adres
               </th>
               <th scope="col">
-                Zone ID
+                Bölge Kodu
               </th>
               <th scope="col">
-                Action
+                İşlem
               </th>
             </tr>
           </thead>
@@ -272,14 +272,14 @@ function AllUsers() {
                           );
                         }}
                       >
-                        Edit
+                        Güncelle
                       </button>
                       <button
                         style={{ marginLeft: "5px", marginBottom: "5px" }}
                         className="btn btn-sm btn-outline-dark"
                         onClick={() => deleteUser(user._id)}
                       >
-                        Delete
+                        Sil
                       </button>
                     </td>
                   </tr>
@@ -294,11 +294,11 @@ function AllUsers() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Update User Details</h5>
+              <h5 className="modal-title">Kullanıcı Bilgilerini Güncelle</h5>
             </div>
             <div className="modal-body">
               <label>
-                <b>Change Email</b>
+                <b>E-posta</b>
               </label>
               <input
                 type="email"
@@ -308,7 +308,7 @@ function AllUsers() {
                 className="form-control"
               />
               <label style={{ marginTop: "20px" }}>
-                <b>Change Contact Number</b>
+                <b>İletişim Numarası</b>
               </label>
               <input
                 type="tel"
@@ -318,19 +318,19 @@ function AllUsers() {
                 className="form-control"
               />
               <label style={{ marginTop: "20px" }}>
-                <b>Change Address</b>
+                <b>Adres</b>
               </label>
               <textarea
                 rows="2"
                 maxlength="50"
-                type="tel"
+                type="text"
                 name="address"
                 value={userInfo.address}
                 onChange={handleChange}
                 className="form-control"
               />
               <label style={{ marginTop: "20px" }}>
-                <b>Change Zone</b>
+                <b>Bölge Kodu</b>
               </label>
               <input
                 type="number"
@@ -347,14 +347,14 @@ function AllUsers() {
                 onClick={update}
                 data-dismiss="modal"
               >
-                Done
+                Kaydet
               </button>
               <button
                 type="button"
                 className="btn btn-outline-dark"
                 data-dismiss="modal"
               >
-                Close
+                Kapat
               </button>
             </div>
           </div>

@@ -49,7 +49,7 @@ function LogInPage() {
         className="text-dark"
         style={{ fontSize: "75px", textAlign: "center", marginTop: "5rem" }}
       >
-        Log In
+        Elektrik Faturası Yönetim Sistemi
       </h1>
       <div className="row justify-content-center">
         <div className="col-md-9 col-lg-12 col-xl-10">
@@ -68,7 +68,7 @@ function LogInPage() {
                 <div className="col-lg-6">
                   <div className="p-5">
                     <div className="text-center">
-                      <h4 className="">Welcome Back!</h4>
+                      <h4 className="">Hoşgeldiniz</h4>
                     </div>
                     <form className="user">
                       <div className="mb-3">
@@ -77,7 +77,7 @@ function LogInPage() {
                           className="form-control form-control-user"
                           type="email"
                           id="exampleFirstName"
-                          placeholder="Email"
+                          placeholder="E-posta"
                           name="email"
                           value={user.email}
                         />
@@ -88,7 +88,7 @@ function LogInPage() {
                           className="form-control form-control-user"
                           type="password"
                           id="examplePasswordInput"
-                          placeholder="Password"
+                          placeholder="Şifre"
                           name="password"
                           value={user.password}
                         />
@@ -98,7 +98,7 @@ function LogInPage() {
                         className="btn btn-primary d-block btn-user w-100"
                         type="submit"
                       >
-                        Login
+                        Giriş
                       </button>
                       <hr />
                     </form>

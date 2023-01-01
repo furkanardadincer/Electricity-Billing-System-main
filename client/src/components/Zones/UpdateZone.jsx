@@ -72,7 +72,7 @@ function UpdateZone() {
               .get("http://localhost:5000/zone/")
               .then((res) => {
                 setAllZones(res.data.zones);
-                toast.success("Zone updated Successfully!", {
+                toast.success("Bölge Başarıyla Güncellendi!", {
                   position: "top-center",
                   autoClose: 3000,
                   hideProgressBar: false,
@@ -107,16 +107,16 @@ function UpdateZone() {
           <thead>
             <tr>
               <th style={{ width: "25%" }} scope="col">
-                Zone ID
+                Bölge ID
               </th>
               <th style={{ width: "25%" }} scope="col">
-                Zone Name
+                Bölge Adı
               </th>
               <th style={{ width: "25%" }} scope="col">
-                Cost
+                Kullanım Bedeli
               </th>
               <th style={{ width: "25%" }} scope="col">
-                Action
+                İşlem
               </th>
             </tr>
           </thead>
@@ -147,7 +147,7 @@ function UpdateZone() {
                           getCurrentZone(zone._id);
                         }}
                       >
-                        Edit
+                        Düzenle
                       </button>
                     </td>
                   </tr>
@@ -161,11 +161,11 @@ function UpdateZone() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Update Zone</h5>
+              <h5 className="modal-title">Bölge Güncelleme</h5>
             </div>
             <div className="modal-body">
               <label>
-                <b>Change Cost</b>
+                <b>Kullanım Bedeli</b>
               </label>
               <input
                 type="email"
@@ -182,14 +182,14 @@ function UpdateZone() {
                 onClick={update}
                 data-dismiss="modal"
               >
-                Done
+                Kaydet
               </button>
               <button
                 type="button"
                 className="btn btn-outline-dark"
                 data-dismiss="modal"
               >
-                Close
+                Kapat
               </button>
             </div>
           </div>

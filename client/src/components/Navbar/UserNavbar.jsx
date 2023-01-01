@@ -67,7 +67,7 @@ function UserNavbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button className="navbar-brand btn">Electricity Billing System</button>
+        <button className="navbar-brand btn">Elektrik Fatura Sistemi</button>
         <button
           className="navbar-toggler"
           type="button"
@@ -84,21 +84,21 @@ function UserNavbar(props) {
             <li className="nav-item">
               {props.page !== "Home" && (
                 <button onClick={home} className="nav-link btn">
-                  Home
+                  Anasayfa
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "View Bill" && (
                 <button onClick={viewBills} className="nav-link btn">
-                  View Bills
+                  Faturalar
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "Payment History" && (
                 <button onClick={paidBills} className="nav-link btn">
-                  Payment History
+                  Ödeme Geçmişi
                 </button>
               )}
             </li>
@@ -108,12 +108,12 @@ function UserNavbar(props) {
                 data-target="#exampleModalCenter"
                 className="nav-link btn"
               >
-                Change Password
+                Şifre Değiştir
               </button>
             </li>
             <li className="nav-item">
               <button onClick={logout} className="nav-link btn">
-                Logout
+                Çıkış
               </button>
             </li>
           </ul>
@@ -123,11 +123,11 @@ function UserNavbar(props) {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Change your Password</h5>
+              <h5 className="modal-title">Şifre Değiştir</h5>
             </div>
             <div className="modal-body">
               <label>
-                <b>Enter new Password</b>
+                <b>Yeni Şifre</b>
               </label>
               <div className="form-inline">
                 <input
@@ -156,14 +156,14 @@ function UserNavbar(props) {
                 onClick={updatePassword}
                 data-dismiss="modal"
               >
-                Done
+                Kaydet
               </button>
               <button
                 type="button"
                 className="btn btn-outline-dark"
                 data-dismiss="modal"
               >
-                Close
+                Kapat
               </button>
             </div>
           </div>

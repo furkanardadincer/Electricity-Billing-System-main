@@ -41,7 +41,7 @@ function Navbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button className="navbar-brand btn">Electricity Billing System</button>
+        <button className="navbar-brand btn">Elektrik Faturası Yönetim Sistemi</button>
         <button
           className="navbar-toggler"
           type="button"
@@ -58,21 +58,21 @@ function Navbar(props) {
             <li className="nav-item">
               {props.page !== "Home" && (
                 <button onClick={home} className="nav-link btn">
-                  Home
+                  Anasayfa
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "Add User" && (
                 <button onClick={addUser} className="nav-link btn">
-                  Add User
+                  Yeni Kullanıcı
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "View User" && (
                 <button onClick={viewUsers} className="nav-link btn">
-                  View Users
+                  Kullanıcıları Görüntüle
                 </button>
               )}
             </li>
@@ -80,34 +80,34 @@ function Navbar(props) {
             <li className="nav-item">
               {props.page !== "Create Bill" && (
                 <button onClick={createBill} className="nav-link btn">
-                  Create Bill
+                  Fatura Oluştur
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "View Bill" && (
                 <button onClick={viewBills} className="nav-link btn">
-                  View Bills
+                  Faturalar
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "Update Zone" && (
                 <button onClick={updateZone} className="nav-link btn">
-                  Update Zone
+                  Bölge Güncelle
                 </button>
               )}
             </li>
             <li className="nav-item">
               {props.page !== "Create Zone" && (
                 <button onClick={createZone} className="nav-link btn">
-                  Create Zone
+                  Bölge Oluştur
                 </button>
               )}
             </li>
             <li className="nav-item">
               <button onClick={logout} className="nav-link btn">
-                Logout
+                Çıkış
               </button>
             </li>
           </ul>

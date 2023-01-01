@@ -166,9 +166,9 @@ function CreateBill() {
     setMail((preValues) => {
       return {
         ...preValues,
-        text: `Bill Month: ${month}
-        Bill Amount: ${amt}
-        Due Date: ${getDueDate()}`
+        text: `Fatura Ayı: ${month}
+        Fatura Tutarı: ${amt}
+        Bitiş Tarihi: ${getDueDate()}`
       };
     });
   }
@@ -188,7 +188,7 @@ function CreateBill() {
         axios
           .post("http://localhost:5000/bill/", bill, config)
           .then((response) => {
-            toast.success("Bill Created Successfully!", {
+            toast.success("Fatura Başarıyla Oluşturuldu!", {
               position: "top-center",
               autoClose: 3000,
               hideProgressBar: false,
@@ -222,7 +222,7 @@ function CreateBill() {
           className="text-dark"
           style={{ fontSize: "75px", textAlign: "center", marginTop: "5rem" }}
         >
-          Create Bill
+          Fatura Oluştur
         </h1>
         <div className="row justify-content-center">
           <div className="col-md-9 col-lg-12 col-xl-10">
@@ -234,7 +234,7 @@ function CreateBill() {
                       className="flex-grow-1 bg-login-image"
                       style={{
                         backgroundImage:
-                          "url(https://5.imimg.com/data5/IQ/TF/FL/SELLER-30356897/pay-electricity-bill-services-500x500.jpg)",
+                          "url(https://st3.depositphotos.com/9881890/15397/i/600/depositphotos_153977506-stock-photo-vintage-light-bulb.jpg)",
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
@@ -247,7 +247,7 @@ function CreateBill() {
                     <div className="p-5">
                       <form className="user">
                         <div className="mb-3">
-                          <h5>User ID</h5>
+                          <h5>Kullanıcı ID</h5>
                           <input
                             onChange={handleChange}
                             name="userId"
@@ -255,18 +255,18 @@ function CreateBill() {
                             className="form-control form-control-user"
                             type="text"
                             id="exampleFirstName"
-                            placeholder="Enter User ID"
+                            placeholder="Kullanıcı ID Gir"
                           />
                         </div>
                         <div className="mb-3">
-                          <h5>Zone</h5>
+                          <h5>Bölge</h5>
                           <div className="mb-3">
                             <select
                               onChange={updateZone}
                               value={zoneName}
                               className="form-control"
                             >
-                              <option value="select">Select</option>
+                              <option value="select">Seç</option>
                               {allZones.map((zone, index) => {
                                 return <option>{zone.zoneName}</option>;
                               })}
@@ -274,7 +274,7 @@ function CreateBill() {
                           </div>
                         </div>
                         <div className="mb-3">
-                          <h5>Units Consumed</h5>
+                          <h5>Tüketilen Birim </h5>
                           <input
                             onChange={handleChange}
                             name="unitsConsumed"
@@ -282,36 +282,36 @@ function CreateBill() {
                             className="form-control form-control-user"
                             type="number"
                             id="examplePasswordInput"
-                            placeholder="Enter Units Consumed"
+                            placeholder="Tüketilen Birimi Gir"
                           />
                         </div>
                         <div className="mb-3">
-                          <h5>Month</h5>
+                          <h5>Ay</h5>
                           <div className="mb-3">
                             <select
                               onChange={updateMonth}
                               value={month}
                               className="form-control"
                             >
-                              <option value="default">Select Month</option>
-                              <option value="January">January</option>
-                              <option value="February">February</option>
-                              <option value="March">March</option>
-                              <option value="April">April</option>
-                              <option value="May">May</option>
-                              <option value="June">June</option>
-                              <option value="July">July</option>
-                              <option value="August">August</option>
-                              <option value="September">September</option>
-                              <option value="October">October</option>
-                              <option value="November">November</option>
-                              <option value="December">December</option>
+                              <option value="default">Seç</option>
+                              <option value="Ocak">Ocak</option>
+                              <option value="Şubat">Şubat</option>
+                              <option value="Mart">Mart</option>
+                              <option value="Nisan">Nisan</option>
+                              <option value="Mayıs">Mayıs</option>
+                              <option value="Haziran">Haziran</option>
+                              <option value="Temmuz">Temmuz</option>
+                              <option value="Ağustos">Ağustos</option>
+                              <option value="Eylül">Eylül</option>
+                              <option value="Ekim">Ekim</option>
+                              <option value="Kasım">Kasım</option>
+                              <option value="Aralık">Aralık</option>
                             </select>
                           </div>
                         </div>
                         {b && (
                           <div className="mb-3">
-                            <h5>Total Amount</h5>
+                            <h5>Toplam Tutar</h5>
                             <p>{bill.billAmount}</p>
                           </div>
                         )}
@@ -321,14 +321,14 @@ function CreateBill() {
                           className="btn btn-success d-block btn-user w-100"
                           type="submit"
                         >
-                          Calculate Bill
+                          Fatura Hesapla
                         </button>
                         <button
                           onClick={createBill}
                           className="btn btn-primary d-block btn-user w-100"
                           type="submit"
                         >
-                          Create Bill
+                          Fatura Oluştur
                         </button>
                         <hr />
                       </form>

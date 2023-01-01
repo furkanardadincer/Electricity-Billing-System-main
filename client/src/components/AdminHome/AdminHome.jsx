@@ -44,11 +44,11 @@ function AdminHome() {
   return (
     <div>
       <Navbar page="Home" />
-      <h1 style={{ padding: "20px", textAlign: "center" }}> Welcome, Admin </h1>
+      <h1 style={{ padding: "20px", textAlign: "center" }}> Hoşgeldin, Admin </h1>
       <div className="d-flex justify-content-center ">
         <div style={{ width: "450px" }} className="card bg-light ">
           <div className="card-header bg-dark">
-            <h3 style={{color:"#ffffff"}} className="d-flex justify-content-center">Admin Details</h3>
+            <h3 style={{color:"#ffffff"}} className="d-flex justify-content-center">Admin Bilgileri</h3>
           </div>
           <div className="card-body">
             <h5 className="card-title">
@@ -56,7 +56,7 @@ function AdminHome() {
                 <div className="form-row ">
                   <div className="col" align="center">
                     <h4>
-                      <label>Name</label>
+                      <label>İsim</label>
                       <br />
                       <b>{name}</b>
                     </h4>
@@ -74,7 +74,7 @@ function AdminHome() {
                 <hr />
                 <div className="col">
                   <h4 className="d-flex justify-content-center">
-                    <label htmlFor="trainName">Email</label>
+                    <label htmlFor="trainName">E-posta</label>
                   </h4>
                   <h3 className="d-flex justify-content-center">
                     <b>{email}</b>
@@ -84,7 +84,7 @@ function AdminHome() {
                 <hr />
                 <div className="col">
                   <h4 className="d-flex justify-content-center">
-                    <label htmlFor="trainName">Contact Number</label>
+                    <label htmlFor="trainName">İletişim Numarası</label>
                   </h4>
                   <h3 className="d-flex justify-content-center">
                     <b>{contactNo}</b>
@@ -94,7 +94,7 @@ function AdminHome() {
                 <hr />
                 <div className="col">
                   <h4 className="d-flex justify-content-center">
-                    <label htmlFor="inputState">Address</label>
+                    <label htmlFor="inputState">Adres</label>
                   </h4>
                   <h3 className="d-flex justify-content-center">
                     <b>{address}</b>

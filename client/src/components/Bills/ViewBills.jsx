@@ -37,7 +37,7 @@ function ViewBills() {
     <div>
       <Navbar page="View Bill" />
       <div className="container" style={{ paddingTop: "40px" }}>
-        <h1>Unpaid Bills</h1>
+        <h1>Ödenmemiş Faturalar</h1>
         {allBills.filter((b) => b.status === "Not Paid").length < 1 ? (
           <h3>No Bills</h3>
         ) : (
@@ -49,28 +49,28 @@ function ViewBills() {
                   ID
                 </th>
                 <th scope="col">
-                  User ID
+                  Kullanıcı ID
                 </th>
                 <th scope="col">
-                  Zone
+                  Bölge
                 </th>
                 <th scope="col">
-                  Month
+                  Ay
                 </th>
                 <th scope="col">
-                  Issue Date
+                  Veriliş tarihi
                 </th>
                 <th scope="col">
-                  Due Date
+                  Bitiş Tarihi
                 </th>
                 <th scope="col">
-                  Units Consumed
+                  Tüketilen Birim
                 </th>
                 <th scope="col">
-                  Bill Amount
+                  Toplam Tutar
                 </th>
                 <th scope="col">
-                  Status
+                  Durum
                 </th>
               </tr>
             </thead>
@@ -116,9 +116,9 @@ function ViewBills() {
         </div>
         )
       }
-        <h1 style={{ marginTop: "20px" }}>Paid Bills</h1>
+        <h1 style={{ marginTop: "20px" }}>Ödenen Faturalar</h1>
         {allBills.filter((b) => b.status === "Paid").length < 1 ? (
-          <h3>No Bills</h3>
+          <h3>Fatura Yok</h3>
         ) : (
           <div className="table-responsive">
           <table className="table table-hover bg-warning">
@@ -128,31 +128,31 @@ function ViewBills() {
                   ID
                 </th>
                 <th scope="col">
-                  User ID
+                  Kullanıcı ID
                 </th>
                 <th scope="col">
-                  Zone
+                  Bölge
                 </th>
                 <th scope="col">
-                  Month
+                  Ay
                 </th>
                 <th scope="col">
-                  Issue Date
+                  Veriliş Tarihi
                 </th>
                 <th scope="col">
-                  Due Date
+                  Bitiş Tarihi
                 </th>
                 <th scope="col">
-                  Payment Date
+                  Ödeme Tarihi
                 </th>
                 <th scope="col">
-                  Units Consumed
+                  Tüketilen Birim
                 </th>
                 <th scope="col">
-                  Bill Amount
+                  Toplam Tutar
                 </th>
                 <th scope="col">
-                  Status
+                  Durum
                 </th>
               </tr>
             </thead>

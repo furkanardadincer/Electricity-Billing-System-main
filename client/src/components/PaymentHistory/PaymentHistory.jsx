@@ -40,7 +40,7 @@ function PaymentHistory() {
     <div>
       <UserNavbar page="Payment History" />
       <div className="container">
-        <h1 style={{ marginTop: "20px" }}>Paid Bills</h1>
+        <h1 style={{ marginTop: "20px" }}>Ödeme Geçmişi</h1>
         {allBills.length < 1 ? (
           <h3>No Bills</h3>
         ) : (
@@ -52,28 +52,28 @@ function PaymentHistory() {
                   ID
                 </th>
                 <th scope="col">
-                  Zone
+                  Bölge
                 </th>
                 <th scope="col">
-                  Month
+                  Ay
                 </th>
                 <th scope="col">
-                  Issue Date
+                  Veriliş Tarihi
                 </th>
                 <th scope="col">
-                  Due Date
+                  Bitiş Tarihi
                 </th>
                 <th scope="col">
-                  Payment Date
+                  Ödeme Tarihi
                 </th>
                 <th scope="col">
-                  Units Consumed
+                  Tüketilen Birim
                 </th>
                 <th scope="col">
-                  Bill Amount
+                  Toplam Tutar
                 </th>
                 <th scope="col">
-                  Status
+                  Durum
                 </th>
               </tr>
             </thead>

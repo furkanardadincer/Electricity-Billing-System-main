@@ -15,16 +15,16 @@ function WelcomePage() {
         className="text-dark"
         style={{ textAlign: "center", fontSize: "75px" }}
       >
-        Electricity Bill System
+        Elektrik Faturası Yönetim Sistemi
       </h1>
       <p
         className="text-dark"
         style={{ fontSize: "30px", textAlign: "center", marginTop: "35px" }}
       >
-        Login Now to Pay Your Bills
+        
       </p>
       <div onClick={login} style={{ marginTop: "50px" }} className={styles.btn}>
-        Login
+        Giriş
       </div>
     </div>
   );

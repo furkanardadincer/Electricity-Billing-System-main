@@ -45,81 +45,6 @@ function ViewUserBill() {
     }
   }, []);
 
-  // async function handleToken(token) {
-  //   var response = await axios.post("http://localhost:5000/user/payment", {
-  //     token,
-  //     billAmt
-  //   });
-  //
-  //   if (response.data.status === "success") {
-  //     const loggedInUser = localStorage.getItem("userData");
-  //
-  //     if (loggedInUser) {
-  //       const foundUser = JSON.parse(loggedInUser);
-  //
-  //       const config = {
-  //         headers: { Authorization: "Bearer " + foundUser.token }
-  //       };
-  //       if (foundUser.user.role === "user") {
-  //         var future = new Date();
-  //
-  //         let date = ("0" + future.getDate()).slice(-2);
-  //         let month = ("0" + (future.getMonth() + 1)).slice(-2);
-  //         let year = future.getFullYear();
-  //
-  //         date = date + "-" + month + "-" + year;
-  //
-  //         const status = {
-  //           status: "Paid",
-  //           paymentDate: date
-  //         };
-  //         axios
-  //           .patch(`http://localhost:5000/bill/${billId}`, status, config)
-  //           .then((response) => {
-  //             console.log(response.data);
-  //             axios
-  //               .get(
-  //                 `http://localhost:5000/bill/user/${foundUser.user.uId}`,
-  //                 config
-  //               )
-  //               .then((res) => {
-  //                 if (res.data.bills.length > 0) {
-  //                   setAllBills(res.data.bills);
-  //                 } else {
-  //                   console.log("A");
-  //                 }
-  //               })
-  //               .catch((error) => {
-  //                 history.push("/login");
-  //               });
-  //           });
-  //         setBillAmt(0);
-  //         setBillId("");
-  //       } else {
-  //         history.push("/login");
-  //       }
-  //       toast.success("Payment Successful!", {
-  //         position: "top-center",
-  //         autoClose: 3000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined
-  //       });
-  //     } else {
-  //       toast.error("Payment Failed", {
-  //         position: "top-center",
-  //         autoClose: 3000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined
-  //       });
-  //     }
-  //   }
-  // }
 
   async function displayRazorpay(amt, billId, billMonth) {
 
@@ -135,7 +60,7 @@ function ViewUserBill() {
         handler: function (res) {
           console.log(res);
           payBill(amt, billId, billMonth);
-          toast.success("Payment Successful!", {
+          toast.success("Ödeme Gerçekleştirildi!", {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
@@ -211,17 +136,12 @@ Bill Amount: ${billAmt}`
     }
   }
 
-  // function getCurrentBill(amt, id) {
-  //   setBillAmt(amt);
-  //   setBillId(id);
-  // }
-
   return (
     <div>
       <UserNavbar page="View Bill" />
       <div style={{ margin: "40px" }}>
         {allBills.filter((b) => b.status !== "Paid").length < 1 ? (
-          <h1 style={{ textAlign: "center" }}>No Bills</h1>
+          <h1 style={{ textAlign: "center" }}>Faturanız Bulunmamaktadır.</h1>
         ) : (
           <div className="table-responsive">
           <table className="table table-hover bg-warning">
@@ -231,28 +151,28 @@ Bill Amount: ${billAmt}`
                   ID
                 </th>
                 <th scope="col">
-                  Zone
+                  Bölge
                 </th>
                 <th scope="col">
-                  Month
+                  Ay
                 </th>
                 <th scope="col">
-                  Issue Date
+                  Veriliş Tarihi
                 </th>
                 <th scope="col">
-                  Due Date
+                  Bitiş Tarihi
                 </th>
                 <th scope="col">
-                  Units Consumed
+                  Tüketilen Birim
                 </th>
                 <th scope="col">
-                  Bill Amount
+                  Toplam Tutar
                 </th>
                 <th scope="col">
-                  Status
+                  Durum
                 </th>
                 <th scope="col">
-                  Action
+                  İşlem
                 </th>
               </tr>
             </thead>
@@ -301,7 +221,7 @@ Bill Amount: ${billAmt}`
                               displayRazorpay(bill.billAmount, bill._id, bill.month)
                             }
                           >
-                            Pay
+                            Ödeme
                           </button>
                         </td>
                       </tr>
